@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def digits(n):
     count = 0
     if n == 0:
@@ -108,7 +107,11 @@ def is_power_of_two(number):
     if number == 1:
         return True
     return False
-=======
+
+
+== == == =
+
+
 def digits(n):
     count = 0
     if n == 0:
@@ -218,4 +221,13 @@ def is_power_of_two(number):
     if number == 1:
         return True
     return False
->>>>>>> e893b072a61f3a61244427a2150a6fccadd80eb8
+
+
+def network(servers):
+    result = ""
+    for host_servers, ip_address in servers.items():
+        result += "The IP address of the {} server is {} \n".format(
+            host_servers, ip_address)
+    return result
+# print(network({"Domain Name Server": "8.8.8.8", "Gateway Server": "192.168.1.1",
+#       "Print Server": "192.168.1.33", "Mail Server": "192.168.1.190"}))
