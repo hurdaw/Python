@@ -129,7 +129,6 @@ def network(servers):
 
 # print(network({"Domain Name Server": "8.8.8.8", "Gateway Server": "192.168.1.1",
 #       "Print Server": "192.168.1.33", "Mail Server": "192.168.1.190"}))
-== == == =
 # file_count = {"jpg": [10], "exe": 5, "txt": 3}
 # print(file_count)
 # i = file_count["exe"]
@@ -261,3 +260,13 @@ def network(servers):
 
 # print(network({"Domain Name Server": "8.8.8.8", "Gateway Server": "192.168.1.1",
 #       "Print Server": "192.168.1.33", "Mail Server": "192.168.1.190"}))
+
+
+def printFun(test):
+    if (test < 1):
+        return
+    else:
+        print(test, end=" ")
+        printFun(test-1)  # statement 2
+        print(test, end=" ")
+        return
