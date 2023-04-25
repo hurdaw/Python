@@ -3,7 +3,7 @@ def replace_old_domain(email, old_domain, new_domain):
     if "@" + old_domain in email:
         index = email.index("@"+old_domain)
         new_email = email[:index]+"@"+new_domain
-        return new_emai
+        return new_email
     return email
 # print(replace_old_domain("tn133931@gmail.com", "gmail.com", "yahoo.com"))
 # def replace(old, new):
