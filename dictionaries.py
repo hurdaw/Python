@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # file_count = {"jpg": [10], "exe": 5, "txt": 3}
 # print(file_count)
 # i = file_count["exe"]
@@ -126,9 +125,11 @@ def network(servers):
         result += "The IP address of the {} server is {} \n".format(
             host_servers, ip_address)
     return result
+
+
 # print(network({"Domain Name Server": "8.8.8.8", "Gateway Server": "192.168.1.1",
 #       "Print Server": "192.168.1.33", "Mail Server": "192.168.1.190"}))
-=======
+== == == =
 # file_count = {"jpg": [10], "exe": 5, "txt": 3}
 # print(file_count)
 # i = file_count["exe"]
@@ -256,6 +257,7 @@ def network(servers):
         result += "The IP address of the {} server is {} \n".format(
             host_servers, ip_address)
     return result
+
+
 # print(network({"Domain Name Server": "8.8.8.8", "Gateway Server": "192.168.1.1",
 #       "Print Server": "192.168.1.33", "Mail Server": "192.168.1.190"}))
->>>>>>> e893b072a61f3a61244427a2150a6fccadd80eb8
