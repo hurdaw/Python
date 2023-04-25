@@ -109,9 +109,6 @@ def is_power_of_two(number):
     return False
 
 
-== == == =
-
-
 def digits(n):
     count = 0
     if n == 0:
