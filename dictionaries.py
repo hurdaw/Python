@@ -281,15 +281,113 @@ def format_address(address_string):
 
     # Use a string method to return the required formatted string.
     return street_name
+# print(format_address("123 Main Street"))
+# # Should print: "House number 123 on a street named Main Street"
+# print(format_address("1001 1st Ave"))
+# # Should print: "House number 1001 on a street named 1st Ave"
+# print(format_address("55 North Center Drive"))
+# # Should print "House number 55 on a street named North Center Drive"
 
 
-print(format_address("123 Main Street"))
-# Should print: "House number 123 on a street named Main Street"
+def highlight_word(sentence, word):
+    # Complete the return statement using a string method.
+    return sentence.replace(word, word.upper())
 
 
-print(format_address("1001 1st Ave"))
-# Should print: "House number 1001 on a street named 1st Ave"
+# print(highlight_word("Have a nice day", "nice"))
+# # Should print: "Have a NICE day"
+# print(highlight_word("Shhh, don't be so loud!", "loud"))
+# # Should print: "Shhh, don't be so LOUD!"
+# print(highlight_word("Automating with Python is fun", "fun"))
+# # Should print: "Automating with Python is FUN"
 
 
-print(format_address("55 North Center Drive"))
-# Should print "House number 55 on a street named North Center Drive"
+def alphabetize_lists(list1, list2):
+
+    new_list = []  # Initialize a new list.
+    new_list = list1+list2  # Combine the lists.
+    new_list.sort()
+    return new_list
+
+
+Aniyahs_list = ["Jacomo", "Emma", "Uli", "Nia", "Imani"]
+Imanis_list = ["Loik", "Gabriel", "Ahmed", "Soraya"]
+
+
+print(alphabetize_lists(Aniyahs_list, Imanis_list))
+# Should print: ['Ahmed', 'Emma', 'Gabriel', 'Imani', 'Jacomo', 'Loik', 'Nia', 'Soraya', 'Uli']
+
+
+def endangered_animals(animal_dict):
+    result = ""
+    # Complete the for loop to iterate through the key and value items
+    # in the dictionary.
+    for endangered_animals in animal_dict.keys():
+        # Use a string method to format the required string.
+        result += endangered_animals+"\n"
+    result = result.rstrip("\n")
+    return result
+
+
+# print(endangered_animals({"Javan Rhinoceros": 60,
+#       "Vaquita": 10, "Mountain Gorilla": 200, "Tiger": 500}))
+
+# Should print:
+# Javan Rhinoceros
+# Vaquita
+# Mountain Gorilla
+# Tiger
+
+
+def setup_guests(guest_list):
+    # loop over the guest list and add each guest to the dictionary with
+    # an initial value of 0
+    result = {}  # Initialize a new dictionary
+    for names in guest_list:  # Iterate over the elements in the list
+        # Add each list element to the dictionary as a key with
+        result[names] = 0
+    # the starting value of 0
+    return result
+
+
+# guests = ["Adam", "Camila", "David", "Jamal", "Charley",
+#           "Titus", "Raj", "Noemi", "Sakira", "Chidi"]
+
+# print(setup_guests(guests))
+# # Should print {'Adam': 0, 'Camila': 0, 'David': 0, 'Jamal': 0, 'Charley': 0, 'Titus': 0, 'Raj': 0, 'Noemi': 0, 'Sakira': 0, 'Chidi': 0}
+
+def count_letters(text):
+    # Initialize a new dictionary.
+    dictionary = {}
+    # Complete the for loop to iterate through each "text" character and
+    # use a string method to ensure all letters are lowercase.
+    for letter in text:
+        # Complete the if-statement using a string method to check if the
+        # character is a letter.
+        letter = letter.lower()
+        if letter.isalpha():
+            # Complete the if-statement using a logical operator to check if
+           # the letter is not already in the dictionary.
+            if letter not in dictionary:
+               # Use a dictionary operation to add the letter as a key
+               # and set the initial count value to zero.
+                dictionary[letter] = 0
+            # Use a dictionary operation to increment the letter count value
+            # for the existing key.
+            dictionary[letter] += 1
+            # Increment the letter counter.
+    return dictionary
+
+
+# print(count_letters("AaBbCc"))
+# # Should be {'a': 2, 'b': 2, 'c': 2}
+
+# print(count_letters("Math is fun! 2+2=4"))
+# # Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+# print(count_letters("This is a sentence."))
+# # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+teacher_names = {"Math": "Aniyah Cook",
+                 "Science": "Ines Bisset", "Engineering": "Wayne Branon"}
+print(teacher_names.values())
