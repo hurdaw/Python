@@ -314,7 +314,7 @@ Aniyahs_list = ["Jacomo", "Emma", "Uli", "Nia", "Imani"]
 Imanis_list = ["Loik", "Gabriel", "Ahmed", "Soraya"]
 
 
-print(alphabetize_lists(Aniyahs_list, Imanis_list))
+# print(alphabetize_lists(Aniyahs_list, Imanis_list))
 # Should print: ['Ahmed', 'Emma', 'Gabriel', 'Imani', 'Jacomo', 'Loik', 'Nia', 'Soraya', 'Uli']
 
 
@@ -388,6 +388,21 @@ def count_letters(text):
 # print(count_letters("This is a sentence."))
 # # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
 
-teacher_names = {"Math": "Aniyah Cook",
-                 "Science": "Ines Bisset", "Engineering": "Wayne Branon"}
-print(teacher_names.values())
+def car_listing(car_prices):
+    result = ""
+    # Complete the for loop to iterate through the key and value items
+    # in the dictionary.
+    for car_model, car_price in car_prices.items():
+        # Use a string method to format the required string.
+        result += "A {} costs {} dollars\n".format(car_model, car_price)
+    return result
+
+
+# print(car_listing({"Kia Soul": 19000, "Lamborghini Diablo": 55000,
+#       "Ford Fiesta": 13000, "Toyota Prius": 24000}))
+
+# Should print:
+# A Kia Soul costs 19000 dollars
+# A Lamborghini Diablo costs 55000 dollars
+# A Ford Fiesta costs 13000 dollars
+# A Toyota Prius costs 24000 dollars
