@@ -91,8 +91,14 @@ def exchange_ideas(you, me):
 # exchange_ideas(johanna, martin)
 # print("Johanna has {} ideas and Martin has {} ideas".format(
 #     johanna.ideas, martin.ideas))
-
 # define a basic city class
+
+
+# The City class has the following attributes: name, country (where the city is located), elevation (measured in meters),
+# and population (approximate, according to recent statistics). Fill in the blanks of the max_elevation_city function
+# to return the name of the city and its country (separated by a comma), when comparing the 3 defined instances
+# for a specified minimal population.
+# For example, calling the function for a minimum population of 1 million: max_elevation_city(1000000) should return "Sofia, Bulgaria".
 class City:
     name = ""
     country = ""
@@ -134,26 +140,49 @@ def max_elevation_city(min_population):
     # Evaluate the 1st instance to meet the requirements:
     # does city #1 have at least min_population and
     # is its elevation the highest evaluated so far?
-    if ___
-    return_city = ___
+    if city1.population >= min_population and city1.elevation > return_city.elevation:
+        return_city = city1
     # Evaluate the 2nd instance to meet the requirements:
     # does city #2 have at least min_population and
     # is its elevation the highest evaluated so far?
-    if ___
-    return_city = ___
+    if city2.population >= min_population and city2.elevation > return_city.elevation:
+        return_city = city2
     # Evaluate the 3rd instance to meet the requirements:
     # does city #3 have at least min_population and
     # is its elevation the highest evaluated so far?
-    if ___
-    return_city = ___
+    if city3.population >= min_population and city3.elevation > return_city.elevation:
+        return_city = city3
 
     # Format the return string
     if return_city.name:
-        return ___
+        return "{}, {}".format(return_city.name, return_city.country)
     else:
         return ""
 
 
-print(max_elevation_city(100000))  # Should print "Cusco, Peru"
-print(max_elevation_city(1000000))  # Should print "Sofia, Bulgaria"
-print(max_elevation_city(10000000))  # Should print ""
+# print(max_elevation_city(100000))  # Should print "Cusco, Peru"
+# print(max_elevation_city(1000000))  # Should print "Sofia, Bulgaria"
+# print(max_elevation_city(10000000))  # Should print ""
+
+class Furniture:
+    color = ""
+    material = ""
+
+
+table = Furniture()
+table.color = "brown"
+table.material = "wood"
+
+couch = Furniture()
+couch.color = "red"
+couch.material = "leather"
+
+
+def describe_furniture(piece):
+    return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+
+
+# print(describe_furniture(table))
+# # Should be "This piece of furniture is made of brown wood"
+# print(describe_furniture(couch))
+# # Should be "This piece of furniture is made of red leather"
