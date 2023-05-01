@@ -100,14 +100,18 @@ def exchange_ideas(you, me):
 # for a specified minimal population.
 # For example, calling the function for a minimum population of 1 million: max_elevation_city(1000000) should return "Sofia, Bulgaria".
 class City:
-    name = ""
-    country = ""
-    elevation = 0
-    population = 0
+    # name = ""
+    # country = ""
+    # elevation = 0
+    # population = 0
+    def __init__(self):
+        self.name = ""
+        self.country = ""
+        self.elevation = 0
+        self.population = 0
 
-
-# create a new instance of the City class and
-# define each attribute
+    # create a new instance of the City class and
+    # define each attribute
 city1 = City()
 city1.name = "Cusco"
 city1.country = "Peru"
@@ -145,6 +149,7 @@ def max_elevation_city(min_population):
     # Evaluate the 2nd instance to meet the requirements:
     # does city #2 have at least min_population and
     # is its elevation the highest evaluated so far?
+
     if city2.population >= min_population and city2.elevation > return_city.elevation:
         return_city = city2
     # Evaluate the 3rd instance to meet the requirements:
@@ -152,7 +157,6 @@ def max_elevation_city(min_population):
     # is its elevation the highest evaluated so far?
     if city3.population >= min_population and city3.elevation > return_city.elevation:
         return_city = city3
-
     # Format the return string
     if return_city.name:
         return "{}, {}".format(return_city.name, return_city.country)
@@ -164,25 +168,48 @@ def max_elevation_city(min_population):
 # print(max_elevation_city(1000000))  # Should print "Sofia, Bulgaria"
 # print(max_elevation_city(10000000))  # Should print ""
 
-class Furniture:
-    color = ""
-    material = ""
+# class Furniture:
+#     color = ""
+#     material = ""
 
 
-table = Furniture()
-table.color = "brown"
-table.material = "wood"
+# table = Furniture()
+# table.color = "brown"
+# table.material = "wood"
 
-couch = Furniture()
-couch.color = "red"
-couch.material = "leather"
+# couch = Furniture()
+# couch.color = "red"
+# couch.material = "leather"
 
 
-def describe_furniture(piece):
-    return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+# def describe_furniture(piece):
+#     return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
 
 
 # print(describe_furniture(table))
 # # Should be "This piece of furniture is made of brown wood"
 # print(describe_furniture(couch))
 # # Should be "This piece of furniture is made of red leather"
+
+
+class Furniture:
+    def __init__(self, color, material):
+        self.color = color
+        self.material = material
+
+
+table = Furniture("brown", "wood")
+couch = Furniture("red", "leather")
+
+
+def describe_furniture(piece):
+    return (f"This piece of furniture is made of {piece.color} {piece.material}")
+
+
+print(describe_furniture(table))
+# Should be "This piece of furniture is made of brown wood"
+print(describe_furniture(couch))
+# Should be "This piece of furniture is made of red leather"
+
+
+# web
