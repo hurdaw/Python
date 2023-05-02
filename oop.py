@@ -110,6 +110,7 @@ class City:
         self.elevation = 0
         self.population = 0
 
+
     # create a new instance of the City class and
     # define each attribute
 city1 = City()
@@ -258,10 +259,37 @@ def describe_furniture(piece):
     return (f"This piece of furniture is made of {piece.color} {piece.material}")
 
 
-print(describe_furniture(table))
-# Should be "This piece of furniture is made of brown wood"
-print(describe_furniture(couch))
-# Should be "This piece of furniture is made of red leather"
+# print(describe_furniture(table))
+# # Should be "This piece of furniture is made of brown wood"
+# print(describe_furniture(couch))
+# # Should be "This piece of furniture is made of red leather"
 
 
-# web
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+    def __str__(self):
+        return f"This apple is {self.color} and its flavor is {self.flavor}"
+
+
+gold = Apple("Yellow", "Sour")
+# print(gold)
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def greeting(self):
+        # Should return "hi, my name is " followed by the name of the Person.
+        return f"hi, my name is {self.name}"
+
+
+# Create a new instance with a name of your choice
+some_person = Person("Thang")
+# Call the greeting method
+# print(some_person.greeting())
+
+help(Apple)
