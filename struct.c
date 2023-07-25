@@ -159,6 +159,20 @@ void search(st a[100], int n)
     }
     printf("khong tim thay sinh vien vua nhap");
 }
+st search2(st a[100], int n)
+{
+    double max = -1e19 - 1;
+    int index;
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i].GPA > max)
+        {
+            max = a[i].GPA;
+            index = i;
+        }
+    }
+    printf("%s ", a[index].name);
+}
 int main()
 {
     int n;
@@ -168,4 +182,5 @@ int main()
     // printf("nhap ma sinh vien can tim kiem: ");
     // scanf("%s", s);
     search(a, n);
+    search2(a, n);
 }
